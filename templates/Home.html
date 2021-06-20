@@ -1,0 +1,96 @@
+{% extends 'baseHome.html' %}
+{% block title %}
+    HomePage Social Distancing
+{% endblock %}
+
+{% block content %}
+
+<div class="menubar">
+    <div class="container">
+        <div class="logo">
+            <h1 style="font-weight: bold;">Social Distancing</h1>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="https://ddc.moph.go.th/viralpneumonia/index.php" target="_blank">COVID-19 News</a>
+            </li>
+            <li>
+                <a href="#About">About</a>
+            </li>
+            <li>
+                <a href="#Meaning">Meaning</a>
+            </li>
+            <li>
+                <a href="#ZES">ZES camp</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>
+
+<header class="header">
+    <div class="container">
+        <div class="header_area">
+            <h1>COVID-19</h1>
+            <p>CORONA VIRUS</p>
+        </div>
+    </div>
+</header>
+
+<section class="info1">
+    <article id="About"></article>
+    <div class="container">
+        <div class="info1_area">
+            <img src="https://static.thairath.co.th/media/dFQROr7oWzulq5FZYjcZjekOTsB2pHQR2rTC5kP2dgLZ8cEAu6XO6hi4hHrgwwqZd36.jpg" alt="">
+            <div class="info1_text">
+                <h1>โรคโควิด 19 คืออะไร</h1>
+                <p>โรคโควิด 19 คือโรคติดต่อซึ่งเกิดจากไวรัสโคโรยสชนิดที่มีการค้นพบล่าสุด</p>
+                <p>ไวรัสและโรคอบัติใหม่นี้ไม่เป็นที่รู้จักเลยก่อนที่จะมีการระบาดในเมืองอู่ฮั่น ประเทศจีนในเดือนธันวาคมปี 2019</p>
+                <p>ขณะนี้โรคไวรัสโควิด-19 มีการระบาดใหญ่ไปทั่ว ส่งผลกระทบแก่หลายประเทศทั่วโลก</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="info2">
+    <article id="Meaning"></article>
+    <div class="container">
+        <div class="info2_area">
+            <div class="info2_text">
+                <h1>Social Distancing หรือ การเว้นระยะห่างทางสังคม</h1>
+                <p>Social Distancing หรือที่ในภาษาไทยเรียกว่า ‘การเว้นระยะห่างทางสังคม’ ซึ่งการเว้นระยะห่างทางสังคมนี้สามารถเข้าใจง่าย ๆ คือการสร้างระยะห่างระหว่างตัวเราเองกับคนอื่น ๆ ในสังคม 
+                    รวมถึงการลดการออกไปนอกบ้านโดยไม่จำเป็น หลีกเลี่ยงการใช้ขนส่งสาธารณะ การไม่เข้าร่วมกิจกรรมร่วมกับผู้อื่น และการทำงานอยู่ที่บ้าน 
+                    ทั้งนี้การทำ Social Distancing จะช่วยลดอัตรการแพร่ระบาดของไวรัสจากคนสู่คน <br>ตามที่ Gerardo Chowell 
+                    ประธานสาขาวิทยศาสตร์สุขภาพประชากร (Population Health Sciences) จาก Georgia State University ได้เผยว่า ทุก ๆ การลดจำนวนการติดต่อระหว่างคนต่อวัน 
+                    <br>ไม่ว่าจะเป็นการติดต่อระหว่างเครือญาติ เพื่อน เพื่อร่วมงาน หรือที่โรงเรียนนั้นจะช่วยลดการแพร่เชื้อไวรัสในสังคมเป็นอย่างมาก </p>
+            </div>
+            <img src="https://i.ytimg.com/vi/dNHzZQ32z3o/maxresdefault.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>
+
+<section class="info3">
+    <article id="ZES"></article>
+    <div class="container">
+        <div class="info3_area">
+            <div class="info3_text">
+                <h1>ZES Camp ครั้งที่ 13</h1>
+                <p>ในครั้งนี้กลุ่มของพวกเราได้ทำการคิดค้น เครื่องมือการเว้นระยะห่าง เชิญชมงานของพวกเราได้เลย</p>
+                <a href="{{url_for('project')}}" class="btn">View our Projects !</a></div>
+                <img src="https://scontent.fbkk17-1.fna.fbcdn.net/v/t1.6435-9/164880504_4079539575400260_4941519169030330234_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEn4sIBKwzwgLo9xJZd58AeZWHSZTW6zOFlYdJlNbrM4TvnujvB9rr7TdFFfeixBt5hyf08X3Dw51OF5dEE5Veg&_nc_ohc=ghzIRaiwbosAX8M6KQ-&_nc_ht=scontent.fbkk17-1.fna&oh=1198d688959be67dea439ad45ab462cc&oe=60D18006" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p style="font-weight: bolder;">New normal daily life in 2021 | Group 9</p>
+</footer>
+
+{% endblock %}

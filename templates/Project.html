@@ -1,0 +1,109 @@
+{% extends 'baseProject.html' %}
+{% block title %}
+    Project Page 
+{% endblock %}
+
+{% block content %}
+    <section class="header">
+        <nav>
+            <a href="{{url_for('index')}}"><img src="{{url_for('static',filename='Logo.png')}}" alt="Logo"></a>
+            <div class = "nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Home Page</a></li>
+                    <li><a href="#course">Tool</a></li>
+                    <li><a href="#campus">Team</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <h1>Kasetsart University <br>Kamphaeng Saen Campus</h1>
+        <p style="font-size: 25px;">
+            Dapartment of Computer Engineering<br>
+            <br>Social distance detection using Machine Learning Project
+        </p>
+        <!-- ตรงที่ต้องทำปุ่ม -->
+        <!-- <a href="#" class="hero-btn">Visit Us to know more</a> -->
+        <span class="form" id="createspace">
+            <form action="{{ url_for('video_feed_save')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="fileapp" value="_" class="sub" accept="action">
+                <input type="submit" name="btn" value="SEND" class="sub">
+            </form>
+        </span>
+        <br>
+        <br>
+        <a href="{{ url_for ('webcam')}}" class="hero-btn">Click Here To Open a Webcam</a>
+    </div>
+    </section>
+    <section class="course" id="course">
+        <h1>Tool For Project</h1>
+        <p>อุปกรณ์และเครื่องมือที่มีบทบาทมากที่สุดในการสร้างสรรค์และทำงานของตัวโปรเจค</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Google Colab</h3>
+                <p>เราสามารถใช้ Google Colab สร้าง Notebook เขียนโปรแกรมภาษา Python ได้ฟรี ๆ และแถมยังมี GPU, TPU ให้เราได้ใช้ฟรีอีก ทีละ 12 ชั่วโมง
+                    เป็นตัวช่วยในการทำงานเรื่องของการ Train Model ของตัว Yolo
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Visual Studio Code</h3>
+                <p>เป็นโปรแกรมประเภท Editor ใช้ในการแก้ไขโค้ดที่มีขนาดเล็ก แต่มีประสิทธิภาพสูง เป็น OpenSource โปรแกรมจึงสามารถนำมาใช้งานได้โดยไม่มีค่าใช้จ่าย เหมาะสำหรับนักพัฒนาโปรแกรมที่ต้องการใช้งานหลายแพลตฟอร์ม
+                    ซึ่งในที่นี้เราใช้ในการทำ Html Css และ Javascript ควบคู่กับการทำ Flask เพื่อนำตัว Model ขึ้นเว็บไขต์
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Flask</h3>
+                <p>web framework ที่เขียนขึ้นมาสำหรับ Python เพื่อใช้ร่วมกัน webserver ในที่นี้คือเราทำมาใช้เป็นตัวในการนำ Model Machine Learning ขึ้นเว็บไขต์
+                    และเป็นสื่อกลางการทำงานของ 2 ส่วนสำคัญ คือ เว็บไชต์ และ Machine Learning
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="campus" id="campus">
+        <h1>Our Team</h1>
+        <p></p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="{{url_for('static',filename='อาท.jpg')}}" alt="1">
+                <div class="layer">
+                    <h3>Chanakan Srisarutiporn</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static',filename='ติณ.jpg')}}" alt="2">
+                <div class="layer">
+                    <h3>Tinnapop Parittotakaporn</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static',filename='มาร์ค.jpg')}}" alt="3">
+                <div class="layer">
+                    <h3>Chanisorn Ueasomsaksakul</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static',filename='นิว.jpg')}}" alt="4">
+                <div class="layer">
+                    <h3>Alisa Kajangjaem</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static',filename='เจี๊ยบ.jpg')}}" alt="5">
+                <div class="layer">
+                    <h3>Chalanda Saleephol</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        
+    </script>
+{% endblock %}
